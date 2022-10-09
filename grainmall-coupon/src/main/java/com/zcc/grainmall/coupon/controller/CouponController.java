@@ -1,14 +1,12 @@
 package com.zcc.grainmall.coupon.controller;
 
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.zcc.grainmall.coupon.entity.CouponEntity;
 import com.zcc.grainmall.coupon.service.CouponService;
@@ -30,6 +28,10 @@ public class CouponController {
     @Autowired
     private CouponService couponService;
 
+    @GetMapping("/test1")
+    public R memberCoupons(){
+        return R.ok(new HashMap<String, Object>(){{put("coupons", Collections.singleton(new CouponEntity()));}});
+    }
     /**
      * 列表
      */

@@ -1,0 +1,13 @@
+
+spring:
+  application:
+    name: grainmall-gateway
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848 #配置中心地址
+        name-space: grainmall-gateway #命名空间id
+        group: DEFAULT_GROUP  #组名
+        file-extension: yml #文件类型
+server:
+  port: 88

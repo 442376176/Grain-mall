@@ -6,6 +6,10 @@ spring:
     password: root
     url: jdbc:mysql://127.0.0.1:3306/grain_mall_order
     driver-class-name: com.mysql.jdbc.Driver
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
 mybatis-plus:
     #classpath*  *包括引用包的路径
   mapper-locations: classpath*:/mapper/**/*.xml
